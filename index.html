@@ -1,12 +1,17 @@
 <html>
     <head>
         <style>
+            @media (orientation: portrait) {
+  /* Your CSS styles for portrait orientation */
+  .lap{display:block;}
+}
             body{
                 display:flex;
                 flex-direction: row;
                 justify-content: center;
                 padding:20px;
             }
+            .lap{display:none;}
            div{
                 background-color: rgb(240, 240, 240);
                 width: 20vw;
@@ -92,5 +97,6 @@
             <img src="heart.png">
             <p>Here is an eyebuydirect BOGO code: BOGO20L</p>
         </article>
+        <p class="lap">Open from a laptop pls</p>
     </body>
 </html>
