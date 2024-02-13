@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <style>
+            body{
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+                padding:20px;
+            }
+           div{
+                background-color: rgb(240, 240, 240);
+                width: 20vw;
+                position: absolute;
+                box-shadow: 2px 3px 15px rgb(156, 156, 156);
+                border-radius: 10px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight:100;
+           } 
+           section{
+            height:20px;
+            width:20vw;
+            background-color: rgba(158, 158, 158, 0.726);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+           }
+           .error{
+            width:30px;
+            height: 30px;
+            margin: 10px;
+            position: relative;
+            top:7px;
+           }
+           h4{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+           }
+           span{
+            display:flex;
+            flex-direction: row;
+            justify-content: end;
+           }
+           button {
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                color: #333;
+                cursor: pointer;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                padding: 5px 20px;
+                text-align: center;
+                text-decoration: none;
+                transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+                margin:10px;
+            }
+
+.mac-button:hover {
+  background-color: #e0e0e0;
+}
+
+.mac-button:active {
+  background-color: #d0d0d0;
+}
+        </style>
+        <script>
+            var clicked = false
+            function yes(){
+                document.getElementById("notif").style.display = "none";
+                document.getElementById("yay").style.display = "block";
+            }
+            function dart(){
+                if(!clicked){
+                    document.getElementById("notif").style.top = "100px";
+                } else {
+                    document.getElementById("notif").style.top = "0px";
+                }
+                clicked = !clicked;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="notif" id="notif">
+            <section></section>
+            <article style="display:flex; flex-direction: row;"><img class="error" src="err.png"><h4>Will you be my Valentine?</h4></article>
+            <span><button onclick="yes()" style="background-color: #007AFF; border:none;color:white">Yes</button><button onmouseover="dart()">No</button></span>
+        </div>
+        
+        <article style="display:none" id="yay">
+            <h1>Yay!</h1>
+            <img src="heart.png">
+            <p>Here is an eyebuydirect BOGO code: BOGO20L</p>
+        </article>
+    </body>
+</html>
